@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h> // For rand() function
+
+int main() {
+  int mynum;
+  int mynum2;
+
+  printf("Enter a number between 1 and 10: ");
+  scanf("%d", &mynum); // Use & to pass address of variable
+
+  if (mynum < 1 || mynum > 10) {
+    printf("Error: Number is not between 1 and 10, you silly goose");
+    return 1;
+  }
+
+  printf("That number is such a good number, but will it win?\n");
+
+  printf("Will you stick with your number? Enter the number you think will win.\n");
+  scanf("%d", &mynum2);
+
+  if (mynum2 == rand() % 10 + 1) {
+    printf("You win!\n");
+  } else {
+    printf("Darn! You lost. Better luck next time!\n");
+  }
+
+  printf("Thank you\n");
+
+  return 0;
+}

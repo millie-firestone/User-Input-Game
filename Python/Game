@@ -1,0 +1,22 @@
+number = str(input("Enter a number between 1 and 10\n"))
+import random
+
+def test_input():
+    print("That number is such a good number, but will it win?")
+    number2 = str(input("Will you stick with your number? Enter the number you think will win.\n"))
+    if number2 is not int:
+        print("That is not a number.")
+        number2 = int(input("Try again:\n"))
+    if int(number2) == random.randint(1,10):
+        print("You win!)
+    elif int(number2) != random.randint(1,10):
+        print("Darn! You lost. Better luck next time!")
+
+if number is not int:
+    print("That is not a number.")
+    number = int(input("Try again:\n"))
+if int(number) < 11:
+    print("Thank you")
+    test_input()
+elif int(number) > 10:
+    print("Error: Number is not between 1 and 10, you silly goose")
